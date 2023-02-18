@@ -1,0 +1,24 @@
+{{>layouts/header}}
+
+<form action="/articles/create" method="post">
+    <div class="mb-3 p-3">
+        <label class="form-label">제목</label>
+        <input type="text" name="title" placeholder="이곳에 제목을 입력해주세요." class="form-control">
+    </div>
+    <div class="mb-3 p-3">
+        <label class="form-label">내용</label>
+        <textarea name="content" placeholder="내용입력란.." class="form-control" rows="10"></textarea>
+    </div>
+
+    <div class="mb-3 p-3">
+        <button type="submit" class="btn btn-primary w-100 p-3">작성</button>
+
+        <a href="/articles"><button type="button" class="btn btn-primary w-100 p-3 mt-3">취소</button></a>
+
+    </div>
+
+
+
+</form>
+
+{{>layouts/footer}}

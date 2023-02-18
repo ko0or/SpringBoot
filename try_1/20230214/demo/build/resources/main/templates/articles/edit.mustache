@@ -1,0 +1,25 @@
+{{>layouts/header}}
+
+<form action="/articles/update" method="post">
+    <div class="mb-3 p-3">
+        <input name="id" type="hidden" value="{{edit_model.id}}">
+        <label class="form-label">제목</label>
+        <input type="text" name="title" value="{{edit_model.title}}" class="form-control">
+    </div>
+    <div class="mb-3 p-3">
+        <label class="form-label">내용</label>
+        <textarea name="content" class="form-control" rows="10">{{edit_model.content}}</textarea>
+    </div>
+
+    <div class="mb-3 p-3">
+        <button type="submit" class="btn btn-primary w-100 p-3">작성</button>
+
+        <a href="/articles/{{edit_model.id}}"><button type="button" class="btn btn-primary w-100 p-3 mt-3">취소</button></a>
+
+    </div>
+
+
+
+</form>
+
+{{>layouts/footer}}

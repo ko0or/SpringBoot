@@ -1,0 +1,18 @@
+{{>layouts/header}}
+
+
+{{#article_model}}
+<div class="mb-3 p-3">
+    <h2>{{title}}</h2>
+    <hr>
+
+    <p class="mt-5" style="margin-bottom: 300px">{{content}}</p>
+    <a href="/articles"><button class="btn btn-primary">목록으로</button></a>
+    <a href="/articles/{{id}}/edit"><button class="btn btn-primary">수정하기</button></a>
+    <a href="/articles/{{id}}/delete"><button class="btn btn-primary">지우기</button></a>
+</div>
+{{/article_model}}
+
+
+
+{{>layouts/footer}}
