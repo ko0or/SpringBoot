@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 구글링 검색 ` orm native query orm.xml example -->
+<!-- [URL] https://github.com/pkainulainen/spring-data-jpa-examples/blob/master/query-methods/src/main/resources/META-INF/orm.xml -->
+
+
+<entity-mappings
+        xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+        version="2.0">
+
+    <!-- name-query 태그만 바꿔주면 된다 -->
+    <named-native-query
+            name="Comment.findByNickname"
+            result-class="com.example.demo.entity.Comment">
+        <query>
+            <![CDATA[
+                SELECT *
+                FROM comment
+                WHERE nickname = :nickname
+            ]]>
+        </query>
+
+    </named-native-query>
+
+
+
+</entity-mappings>
