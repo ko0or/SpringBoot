@@ -1,0 +1,53 @@
+{{>layouts/header}}
+
+
+
+<div class="mb-3 p-3">
+    <h2>{{article_model.title}}</h2>
+    <hr>
+    <p class="mt-5" style="margin-bottom: 300px">{{article_model.content}}</p>
+
+
+    <a href="/articles"><button class="btn btn-primary">목록으로</button></a>
+    <a href="/articles/{{id}}/edit"><button class="btn btn-primary">수정하기</button></a>
+    <a href="/articles/{{id}}/delete"><button class="btn btn-primary">지우기</button></a>
+
+    <hr>
+    <h4 style="margin-bottom: 50px">댓글목록</h4>
+    <!-- 댓글목록 -->
+    {{#commentDtos}}
+        <h6 style="font-weight: bold">{{nickname}}</h6>
+        <p>{{body}}</p>
+        <br>
+    {{/commentDtos}}
+
+
+    <!-- 댓글작성 -->
+    <div class="card" id="comments-new">
+        <div class="card-body"></div>
+        <form>
+            <div class="mb-3 p-2">
+                <label for="InputNickname" class="form-label">닉네임</label>
+                <input type="text" class="form-control" id="InputNickname" aria-describedby="emailHelp">
+
+            </div>
+            <div class="mb-3 p-2">
+                <label for="InputBody" class="form-label">댓글내용 입력란</label>
+                <textarea class="form-control mb-3" rows="10" id="InputBody"></textarea>
+                <button type="button" id="comment-create-btn" class="btn btn-outline-primary w-100" style="height: 100px">댓글등록</button>
+            </div>
+
+
+
+            <!-- 히든 인풋 -->
+            <input type="hidden" id="new-comment-article-id" value="{{article_model.id}}">
+
+
+        </form>
+    </div>
+</div>
+
+
+
+
+{{>layouts/footer}}
