@@ -4,6 +4,16 @@
 <br>
 
 ### 2️⃣ try_2 <br>
+혼자 도전해보는 스프링부트 ! <br>
+ > # 2023-02-21 <br>
+  `게시글 검색기능`추가 <br>
+  `JpaRepository` 의 `findBy컬럼명Containing`을 활용해서 구현 <br>
+  `BoardController.java` 파일의 `listMethod`에서 사용되었음.
+
+  
+ 
+ <br>
+ 
  혼자 도전해보는 스프링부트 ! <br>
  > # 2023-02-19 <br>
   `게시글 수정기능`까지 구현 마무리 <br>
