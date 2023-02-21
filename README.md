@@ -8,7 +8,8 @@
  > # 2023-02-21 <br>
   `게시글 검색기능`추가 <br>
   `JpaRepository` 의 `findBy컬럼명Containing`을 활용해서 구현 <br>
-  `BoardController.java` 파일의 `listMethod`에서 사용되었음.
+  `BoardController.java` 파일의 `listMethod`에서 사용되었음. <br>
+  일부 파일내용만 수정되었음. `list.html`, 'BoardController.java'
 
   
  
