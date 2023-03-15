@@ -1,0 +1,46 @@
+<h2> Hello <mark>Template</mark> </h2>
+
+<fieldset>
+<legend>Question</legend>
+	<table>
+    <thead>
+	        <tr>
+	        	<th>ID</th>
+	            <th>제목</th>
+	            <th>작성일시</th>
+	        </tr>
+	    </thead>
+	    
+    <tbody>
+	        <tr th:each="question : ${questionList}">
+	            <td th:text="${question.id}"></td>
+	            	<td>
+	            	<a th:href="@{|/question/detail/${question.id}|}" th:text="${question.content}"></a>
+	            	</td>
+	            <td th:text="${question.createDate}"></td>
+	        </tr>
+	    </tbody>   
+	</table>
+</fieldset>
+
+<!--  
+<fieldset>
+<legend>Answer</legend>
+	<table>
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>내용</th>
+			<th>작성일시</th>
+		</tr>
+		</thead>
+		<tbody>
+		        <tr th:each="answer : ${answerList}">
+		        <td th:text="${answer.id}"></td>
+	            <td th:text="${answer.content}"></td>
+	            <td th:text="${answer.createDate}"></td>
+	        </tr>
+	</tbody>
+	</table>
+</fieldset>
+ -->
