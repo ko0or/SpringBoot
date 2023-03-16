@@ -1,4 +1,5 @@
-# 타임리프에 날짜 포맷팅도 지원된다  ${#temporals.format(  대상모델명.createDate, 'yyyy.MM.dd'  ) } 
+# 타임리프에 날짜 포맷팅도 지원된다  
+${#temporals.format(  대상모델명.createDate, 'yyyy.MM.dd'  ) } 
 <td th:text="${question.createDate}"></td>  
 
 <td th:text="${#temporals.format(question.createDate, 'yyyy.MM.dd')}"></td>
